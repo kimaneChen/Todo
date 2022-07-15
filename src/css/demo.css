@@ -1,0 +1,6 @@
+#demo_video {
+  width: 600px;
+  border: 1px solid #dddddd;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  background-color: #000000;
+}

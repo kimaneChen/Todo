@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Userback Todo App</title>
+    <link rel="stylesheet" href="/src/css/styles.css" />
+  </head>
+
+  <body>
+    <!-- Project Requirements -->
+    <h1>Userback interview #2: Todo MVC</h1>
+
+    <div class = "input__box">
+        <label for = "todoItem">Todo</label>
+        <input type="text" id = "task__name" placeholder="Please enter a task" name="todoItem"/>
+        <input type="button" class="add__task" id="task__add"  value="ADD"/> 
+    </div>
+    
+
+    <div>
+      <h2>TaskList To do:</h2>
+      <ul class="tasks__list" id="todo"></ul>
+
+      <h2>TaskList Completed:</h2>
+      <ul class="task__list" id="completed"></ul>
+    </div>
+
+    <!-- end -->
+
+    <div id="app"></div>
+
+    <!-- -->
+    <script src="src/js/app.js"></script>
+  </body>
+</html>

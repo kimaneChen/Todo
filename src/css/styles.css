@@ -1,0 +1,85 @@
+:root {
+  --colour-primary: #2878f0;
+  --colour-secondary: #7828f0;
+  --colour-success: #00c878;
+  --colour-danger: #e80000;
+  --colour-warning: #f0a028;
+
+  --app-bg: #f0f3f9;
+  --font-family: "Arial";
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+input {
+  font-family: var(--font-family);
+}
+
+ul {
+  line-height: 150%;
+}
+
+.input__box label {
+  line-height: 2em;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.input__box input {
+  height: 20px;
+  margin-right: 10px;
+  padding: 4px;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.input__box .add__task {
+  height: 33px;
+  width: 50px;
+  margin-left: 10px;
+  padding: 4px;
+  font-size: 20px;
+  padding: 5px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+ul {
+  width: 100%;
+  float: left;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 30px;
+  line-height: 1.5 em;
+  align-items: center;
+}
+
+li .buttons button {
+  margin: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+li .buttons button.remove {
+  background-color: #e80000;
+}
+
+li .buttons button.complete {
+  background-color: #00c878;
+}
+
+li .buttons button svg {
+  border-radius: 11px;
+  border: 1.5px solid #7828f0;
+  transition: background 0.2s ease;
+}
