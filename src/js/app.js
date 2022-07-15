@@ -10,10 +10,12 @@ let Todo = {
   completeDOM: document.getElementById("completed"),
 
   init: function () {
-    document.getElementById("task__add").addEventListener("click", () => {
-      var todoName = document.getElementById("task__name").value;
-      if (!!todoName) {
-        this.addItem(todoName);
+    document.getElementById("task__name").addEventListener("keyup", (e) => {
+      if (e.key === 'Enter'){
+        var todoName = document.getElementById("task__name").value;
+        if (!!todoName) {
+          this.addItem(todoName);
+        }
       }
     });
   },
