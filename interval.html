@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type ="button" id= "readButton" value="Please read the agreement(10)" disabled>
+  <script>
+    let number = 10;
+    let timerId = setInterval(()=>{
+      number--;
+      var btn = document.getElementById('readButton');
+      btn.value = `Please read the agreement(${number})`;
+      if (number === 0) {
+        btn.value = "Agree";
+        btn.disabled = false;
+        clearInterval(timerId)
+      }
+    }, 1000);
+  </script>
+  
+</body>
+</html>
