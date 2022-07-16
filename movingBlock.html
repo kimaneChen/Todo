@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style> 
+    body {
+      padding: 0px;
+      margin: 0px;
+    }
+    #trace__box{
+      background-color: red;
+      height: 80px;
+      width:80px;
+      font:20px;
+      color:yellow;
+      border:solid;
+      position: absolute;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="trace__box">
+    This is the tracing box: moving_right
+  </div>
+
+  <script>
+    const traceBox = document.getElementById('trace__box');
+    var timerHeightId, timerWidthId;
+    const speed = 5;
+    
+    moveRight();
+
+    function moveRight(){
+      var left = 0;
+      scrollW = document.body.scrollWidth - traceBox.offsetWidth;
+      
+      timerWidthId = setInterval(()=>{
+        left ++
+        traceBox.style.left = left + 'px';
+        if (left === scrollW){
+          clearInterval(timerWidthId);
+          moveDown(left);
+        }
+      }, 5);
+    }
+    
+    function moveDown(left){
+      traceBox.innerText = "move down, Trace Me";
+      traceBox.style.background = "black";
+      scrollH = getScrollHeight() - traceBox.offsetHeight;
+      console.log(scrollH);
+      var top = 0;
+
+      timerHeightId = setInterval(()=>{
+        top++;
+        console.log (top);
+        traceBox.style.top = top + 'px';
+        if (top === scrollH) {
+          clearInterval(timerHeightId);
+        }
+      }, speed);
+
+    } 
+
+    function getScrollHeight(){
+      if (document.body.scrollHeight) {
+        console.log(document.body.scrollHeight);
+        return document.body.scrollHeight;
+      } else{
+        console.log('Window height', window.screen.availHeight);
+        return window.screen.availHeight;
+      }
+    }
+
+
+  </script>
+</body>
+</html>
